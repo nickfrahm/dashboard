@@ -13,6 +13,13 @@ let add = function () {
   }
 }
 
+let enter = document.getElementById("txt-addItem");
+enter.addEventListener("keydown", function (e) {
+  if (e.keyCode === 13) {
+    add();
+  }
+});
+
 //grabs the item from the text input when the add button is clicked
 function getItem() {
   let item = document.querySelector("#txt-addItem").value;
