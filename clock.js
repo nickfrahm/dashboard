@@ -15,6 +15,9 @@ function updateClock() {
   } else if (minutes < 10) {
     minutes = "0" + minutes;
   }
+  else if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
 
   let timeString = hours + ":" + minutes + ":" + seconds + ampm
 
