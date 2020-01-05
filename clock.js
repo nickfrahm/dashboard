@@ -1,0 +1,24 @@
+function updateClock() {
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let ampm = " am"
+
+  if (hours >= 0 && hours < 12) {
+    ampm = "am";
+  } else if (hours == 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+    ampm = " pm"
+  } else if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  let timeString = hours + ":" + minutes + ":" + seconds + ampm
+
+  document.querySelector(".time").innerHTML = timeString;
+}
+
+setInterval(updateClock, 1000);
