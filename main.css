@@ -77,3 +77,15 @@
 hr {
   width: 80%;
 }
+
+.twitter-box {
+  width: 301px;
+  margin: auto;
+}
+
+@media (min-width: 999px) {
+  .wrapper {
+    width: 1000px;
+    margin: 0px auto;
+  }
+}
